@@ -20,7 +20,7 @@ In addition to being charged for using Kinesis, you will incur AWS changes for u
 and for these extra DynamoDB tables; ensure you delete them after testing.  Also, I think you will be charged for publishing to Cloudwatch if it's enabled on your account.
 
 ### Building and running the program: 
-Download, and build the program (mvn is set up to build a "fat jar"):
+Download, and build the program (pom.xml file builds a "fat jar"):
 ```bash
 git clone https://github.com/rcprcp/KinesisKCL.git
 cd KinesisKCL
