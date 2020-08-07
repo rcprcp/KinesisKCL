@@ -11,7 +11,7 @@ I used [StreamSets](https://streamsets.com) Data Collector (download here: http:
 This program creates an application name of the Kinesis Stream Name with a suffix of the
 epoch time in ms.  Using a new application name each time restarts reading the stream from
 the beginning, but it leaves a lot of left-over DynamoDB tables, as these are not cleaned up
-in the KCL (you may want that info to restart reading.
+in the KCL (you may want that info to start reading where you previously left off).
 
 If you want to test checkpointing, remove the epoch ms from the Application Name, rebuild, 
 then the checkpointing should work.
