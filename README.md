@@ -7,7 +7,7 @@ There are no command line arguments.  The Kinesis Stream name is hard-coded.  Cr
 
 I used [StreamSets](https://streamsets.com) Data Collector (download here: http://archives.streamsets.com/) with a test pipeline of Dev Data Generator to Kinesis Producer.  
 
-###Note: 
+### Note: 
 This program creates an application name of the Kinesis Stream Name with a suffix of the
 epoch time in ms.  Using a new application name each time restarts reading the stream from
 the beginning, but it leaves a lot of left-over DynamoDB tables, as these are not cleaned up
@@ -19,7 +19,7 @@ then the checkpointing should work.
 In addition to being charged for using Kinesis, you will incur AWS changes for use of DynamoDB
 and for these extra DynamoDB tables; ensure you delete them after testing.  Also, I think you will be charged for publishing to Cloudwatch if it's enabled on your account.
 
-###Building the program: 
+### Building and running the program: 
 Download, and build the program (mvn is set up to build a "fat jar"):
 ```bash
 git clone https://github.com/rcprcp/KinesisKCL.git
