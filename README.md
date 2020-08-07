@@ -11,13 +11,13 @@ I used [StreamSets](https://streamsets.com) Data Collector (download here: http:
 This program creates an application name of the Kinesis Stream Name with a suffix of the
 epoch time in ms.  Using a new application name each time restarts reading the stream from
 the beginning, but it leaves a lot of left-over DynamoDB tables, as these are not cleaned up
-in the KCL (you man want that info to restart reading.
+in the KCL (you may want that info to restart reading.
 
-If you want to test checkpointing, remove the epoch ms from the Application Name,
+If you want to test checkpointing, remove the epoch ms from the Application Name, rebuild, 
 then the checkpointing should work.
 
 In addition to being charged for using Kinesis, you will incur AWS changes for use of DynamoDB
-and for these extra DynamoDB tables; ensure you delete them after testing.  Also, i think you will be charged for publishing to Cloudwatch
+and for these extra DynamoDB tables; ensure you delete them after testing.  Also, I think you will be charged for publishing to Cloudwatch if it's enabled on your account.
 
 ###Building the program: 
 Download, and build the program (mvn is set up to build a "fat jar"):
